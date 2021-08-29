@@ -1,0 +1,111 @@
+:root {
+    --body-font: 'Open Sans', sans-serif;
+    --primary-color: rgba(89, 12, 18, 1);
+    --secondary-color: rgba(140, 80, 58, 1); 
+    --tertiary-color: rgba(191, 125, 101, 1); 
+    --light-color: rgba(216, 167, 138, 1); 
+    --dark-color: rgba(38, 0, 0, 1); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+/* Color Theme Swatches in Hex */
+.Crimson-1-hex { color: #590C13; }
+.Crimson-2-hex { color: #D9A78B; }
+.Crimson-3-hex { color: #8C513B; }
+.Crimson-4-hex { color: #BF7D65; }
+.Crimson-5-hex { color: #260101; }
+
+/* Color Theme Swatches in RGBA */
+.Crimson-1-rgba { color: rgba(89, 12, 18, 1); }
+.Crimson-2-rgba { color: rgba(216, 167, 138, 1); }
+.Crimson-3-rgba { color: rgba(140, 80, 58, 1); }
+.Crimson-4-rgba { color: rgba(191, 125, 101, 1); }
+.Crimson-5-rgba { color: rgba(38, 0, 0, 1); }
+
+/* body {} */
+
+a {
+    display: inline-block;
+}
+
+.section {
+    padding: 40px 5px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* landing */
+
+.landing {
+    background-color: var(--secondary-color);
+}
+
+/* flight */
+
+.flights {
+    /* background-color: var(--light-color); */
+}
+
+.flight-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.flight-card {
+    background-color: var(--light-color);
+    padding: 15px 25px;
+}
+
+/* about */
+
+.about {
+    background-color: var(--tertiary-color);
+}
+
+/* services */
+
+.services {
+    background-color: var(--dark-color);
+}
+
+/* contact */
+
+.contact {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 767.98px) {
+    .flight-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 567.98px) {
+    .flight-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
