@@ -31,21 +31,47 @@
 
 /* body {} */
 
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
 .section {
     padding: 40px 5px;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 980px;
+    margin: 0 auto;
     padding: 10px;
 }
 
+.desk-none {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+}
+
+.w-100 {
+    width: 100%;
+}
 
 /* nav */
 
 .nav {
-    align-items: center;
-    justify-content: space-between;
     transition: all .2s;
 }
 
@@ -64,14 +90,13 @@
 }
 
 .menu-body {
-    align-items: center;
-    justify-content: space-between;
+    /* align-items: center;
+    justify-content: space-between; */
     transition: all .2s;
 }
 
-.nav-btn {
-    margin-left: 10px;
-    padding: 5px 25px;
+.text-right {
+    text-align: right;
 }
 
 .signup-btn {
@@ -86,10 +111,61 @@
     border: 2px solid var(--primary-color);
 }
 
+.hamburg {
+    display: none;
+}
+
+.hamburg-wrap {
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    /* align-items: center; */
+}
+.hamburg-btn:hover {
+    cursor: pointer;
+}
+
 .lines,
 .lines::after,
 .lines::before {
+    display: inline-block;
+    height: 3px;
+    width: 25px;
     background-color: var(--primary-color);
+    position: relative;
+    transition: all .2s;
+}
+.lines::after,
+.lines::before {
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 7px;
+}
+.lines::after {
+    top: 7px;
+}
+.lines::before {
+    top: -7px;
+}
+.hamburg-btn:hover .lines::after {
+    top: 8px;
+}
+.hamburg-btn:hover .lines::before {
+    top: -8px;
+}
+
+.hamburg:checked ~ .hamburg-btn .hamburg-wrap .lines {
+    background-color: transparent;
+}
+.hamburg:checked ~ .hamburg-btn .hamburg-wrap .lines::after {
+    top: 0;
+    transform: rotate(135deg);
+}
+.hamburg:checked ~ .hamburg-btn .hamburg-wrap .lines::before {
+    top: 0;
+    transform: rotate(-135deg);
 }
 
 /* landing */

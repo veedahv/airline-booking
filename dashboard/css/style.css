@@ -7,45 +7,20 @@
     --dark-color: rgba(38, 0, 0, 1); 
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    font-family: var(--body-font);
-}
-
-/* Color Theme Swatches in Hex */
-.Crimson-1-hex { color: #590C13; }
-.Crimson-2-hex { color: #D9A78B; }
-.Crimson-3-hex { color: #8C513B; }
-.Crimson-4-hex { color: #BF7D65; }
-.Crimson-5-hex { color: #260101; }
-
-/* Color Theme Swatches in RGBA */
-.Crimson-1-rgba { color: rgba(89, 12, 18, 1); }
-.Crimson-2-rgba { color: rgba(216, 167, 138, 1); }
-.Crimson-3-rgba { color: rgba(140, 80, 58, 1); }
-.Crimson-4-rgba { color: rgba(191, 125, 101, 1); }
-.Crimson-5-rgba { color: rgba(38, 0, 0, 1); }
-
 /* body {} */
 
 .section {
     padding: 40px 5px;
 }
 
-.container {
+/* .container {
     max-width: 900px;
     padding: 10px;
-}
-
+} */
 
 /* nav */
 
 .nav {
-    align-items: center;
-    justify-content: space-between;
     transition: all .2s;
 }
 
@@ -64,8 +39,6 @@
 }
 
 .menu-body {
-    align-items: center;
-    justify-content: space-between;
     transition: all .2s;
 }
 
@@ -91,7 +64,6 @@
 .lines::before {
     background-color: var(--primary-color);
 }
-
 /* landing */
 
 .landing {
@@ -133,22 +105,6 @@
 }
 
 @media (max-width: 767.98px) {
-    .desk-none {
-        display: block;
-    }
-    .nav {
-        flex-wrap: wrap;
-    }
-    .nav-ul,
-    .menu-body {
-        flex-direction: column;
-    }
-    .menu-body {
-        display: none;
-    }
-    .hamburg:checked ~ .menu-body {
-        display: flex;
-    }
     .flight-grid {
         grid-template-columns: 1fr 1fr;
     }
