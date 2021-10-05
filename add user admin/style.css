@@ -1,0 +1,49 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.title{
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 60px;
+}
+
+.stop{
+    align-items: center;
+    justify-content: center;
+    display:flex; 
+    padding-top: 7%;
+
+}
+.click{
+    margin: 20px; 
+    height: 40px;
+     align-content: center;
+      text-align: center;
+    }
+button{
+    display: flex;
+    background: rgb(41, 134, 41);
+    color: white;
+    padding: 1em 1.875em;
+    height: 40px;
+    margin-top: 1rem;
+    width: 120px ;
+    justify-self: center;
+    margin-left: 45%;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 0;
+
+
+}
+body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
