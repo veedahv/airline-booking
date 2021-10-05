@@ -1,0 +1,49 @@
+
+
+.title{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    }
+    
+    .stop{
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        margin-left: 33%;
+    
+    }
+    .click{
+        margin: 15px; 
+        height: 40px;
+         align-content: center;
+          text-align: center;
+          
+    }
+    select{
+       width: 198px;
+       text-align: center;
+       height: 40px;
+       text-align: center;
+       }
+
+button{
+    display: flex;
+    background: rgb(41, 134, 41);
+    color: white;
+    padding: 1em 1.875em;
+    height: 40px;
+    margin-top: 1rem;
+    width: 120px ;
+    justify-self: center;
+    margin-left: 45%;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 0;
+
+
+}

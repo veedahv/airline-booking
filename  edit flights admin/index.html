@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin edit flights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h2 class="title">Edit flights</h2>
+    <div class="stop">
+        <input  class="click" type="text" placeholder="Flight Id" required>
+        <input  class="click" type="text" placeholder="icao" required> <br>
+        &nbsp; &nbsp; &nbsp; Departure  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Destination
+       <br> 
+        <select class="click" name="Departure" id="">
+            <option value="Admin">Uyo</option>
+            <option value="Staff">Lagos</option>
+            <option value="User">Owerri</option>
+            <option value="Admin">Abuja</option>
+            <option value="Staff">Benin</option>
+            <option value="User">Kano</option>
+        </select>
+        <select class="click" name="Destination" id="">
+            <option value="Admin">Uyo</option>
+            <option value="Staff">Lagos</option>
+            <option value="User">Owerri</option>
+            <option value="Admin">Abuja</option>
+            <option value="Staff">Benin</option>
+            <option value="User">Kano</option> 
+        </select> <br>
+         &nbsp; &nbsp; &nbsp; Available seats  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Price
+         <br> <input class="click" type="text" value="50">
+         <input class="click" type="text" value="12,000"> <br>
+        <input class="click" type="datetime-local" placeholder="Date&Time" value="" required> 
+        <select class="click" name="Status" id="">
+            <option value="Admin">Yet to depart</option>
+            <option value="Staff">Departed</option>
+        </select> <br>
+    
+    </div>
+    <button>Submit</button>
+</body>
+</html>
