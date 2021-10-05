@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import FlightCard from '../components/FlightCard.vue'
+import BookingForm from '../components/BookingForm.vue'
+import FlightForm from '../components/FlightForm.vue'
 
 const routes = [
   {
@@ -12,6 +14,16 @@ const routes = [
     path: '/FlightCard',
     name: 'FlightCard',
     component: FlightCard
+  },
+  {
+    path: '/FlightForm',
+    name: 'FlightForm',
+    component: FlightForm
+  },
+  {
+    path: '/BookingForm',
+    name: 'BookingForm',
+    component: BookingForm
   },
   {
     path: '/about',

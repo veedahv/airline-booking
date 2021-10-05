@@ -29,7 +29,10 @@
           </div>
         </div>
         <p class="text-center status"></p>
-        <button class="book-btn mx-auto btn px-4">BOOK</button>
+        <!-- <button class="book-btn mx-auto btn px-4">BOOK</button> -->
+        <div class="text-center my-3">
+          <button class="book-btn mx-auto btn px-4">SUBMIT</button>
+        </div>
       </div>
     </div>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
