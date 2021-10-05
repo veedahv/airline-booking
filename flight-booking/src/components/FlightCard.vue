@@ -1,7 +1,36 @@
 <template>
   <div class="home">
-    <div class="card">
-      <div class="card-body">This is some text within a card body.</div>
+    <div class="card border-0">
+      <div class="card-body">
+        <!-- This is some text within a card body. -->
+        <div class="d-flex justify-content-between">
+          <div class="departure"></div>
+          <div class="arrival"></div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="departure">
+            <h3>Departing</h3>
+            <p></p>
+          </div>
+          <div class="arrival">
+            <h3>Arriving</h3>
+            <p></p>
+          </div>
+        </div>
+        <p class="text-center">at</p>
+        <div class="d-flex justify-content-between">
+          <div class="departure">
+            <h3>Departure time</h3>
+            <p></p>
+          </div>
+          <div class="arrival">
+            <h3>Arrival time</h3>
+            <p></p>
+          </div>
+        </div>
+        <p class="text-center status"></p>
+        <button class="book-btn mx-auto btn px-4">BOOK</button>
+      </div>
     </div>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
@@ -11,6 +40,7 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+// import api from '../../api/api.php'
 
 export default {
   //   name: 'Home',
@@ -21,7 +51,7 @@ export default {
     // Example POST method implementation:
     async postData(data) {
       // Default options are marked with *
-      const response = await fetch("http://cpe-dbms.unaux.com/", {
+      const response = await fetch(api, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "no-cors", // no-cors, *cors, same-origin
         body: data, // body data type must match "Content-Type" header
@@ -91,30 +121,54 @@ export default {
     //   .catch((err) => {
     //     console.error(err);
     //   });
-    //   this.axios.post('http://cpe-dbms.unaux.com/', {
-    //       name: "getFlightDetails",
-    //       param: {
-    //           flightId: 1
-    //       }
-    //   }).then((result) => {
-    //      console.log(result);
-    //   }).catch((err) => {
-    //       console.error(err);
-    //   });
-      this.axios.post('http://cpe-dbms.unaux.com/', {
-        // method: "POST", // *GET, POST, PUT, DELETE, etc.
-        mode: "no-cors", // no-cors, *cors, same-origin
-        body: {
+      // this.axios.post('http://cpe-dbms.unaux.com/', {
+      //     name: "getFlightDetails",
+      //     param: {
+      //         flightId: 1
+      //     }
+      // }).then((result) => {
+      //    console.log(result);
+      // }).catch((err) => {
+      //     console.error(err);
+      // });
+      this.axios.post('@/api/api.php', {
           name: "getFlightDetails",
           param: {
               flightId: 1
           }
-      }, // body data type must match "Content-Type" header
       }).then((result) => {
          console.log(result);
       }).catch((err) => {
           console.error(err);
       });
+    //     this.axios.post('http://cpe-dbms.unaux.com/', {
+    //       // method: "POST", // *GET, POST, PUT, DELETE, etc.
+    //       mode: "no-cors", // no-cors, *cors, same-origin
+    //       body: {
+    //         name: "getFlightDetails",
+    //         param: {
+    //             flightId: 1
+    //         }
+    //     }, // body data type must match "Content-Type" header
+    //     }).then((result) => {
+    //        console.log(result);
+    //     }).catch((err) => {
+    //         console.error(err);
+    //     });
   },
 };
 </script>
+
+<style scoped>
+.book-btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  width: 180px;
+}
+.card {
+  font-size: 16px;
+  background-color: var(--light-color)
+}
+</style>
